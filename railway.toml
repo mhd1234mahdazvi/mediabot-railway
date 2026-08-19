@@ -1,0 +1,11 @@
+[build]
+builder = "RAILPACK"
+
+[deploy]
+startCommand = "python main.py"
+restartPolicyType = "ALWAYS"
+
+[environments.production.variables]
+PYTHONUNBUFFERED = "1"
+RAILPACK_BUILD_APT_PACKAGES = "ffmpeg"
+RAILPACK_DEPLOY_APT_PACKAGES = "ffmpeg"
